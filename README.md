@@ -1,4 +1,7 @@
 # cydia_repo-tutorial
+Warning-..this is not complete as of yet..but the all the files needed are there and ready to go..
+
+
 In order to create your own repo you will need to have git installed on your mac/linux system
 
 The easiest way would be to install homebrew and then brew install git
