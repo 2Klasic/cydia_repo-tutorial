@@ -1,0 +1,65 @@
+In order to create your own repo you will need to have git installed on your mac/linux system
+
+1
+The easiest way would be to install homebrew
+It should be http://brew.sh
+	Copy the command line to your Terminal to install Homebrew then press return
+• Press return when prompt to
+• Then type your password for your Mac like you would for logon screen or installing Apps #This is what you need so you can pack your files correctly.
+- 	Now run brew doctor just to make sure everything is ready to brew. • In Terminal type:
+- 	brew doctor
+- 	tap return
+•Should prompt Your system is ready to brew.
+- 	Now the next thing is installing dpkg • In Terminal type:
+- 	brew install dpkg
+- 	tap return
+- 	Now you will want to install latest version of git
+• 	In Terminal type:
+- 	brew install git
+- 	tap return
+•In Terminal type:
+- 	clear #this will clear the Terminal window not the Terminal history
+- 	tap return
+2
+Back to your web browser “Github account” 
+	•	Add New Repository  - This will be your Sources URL that you add to Cydia.  
+	•	You will type in yourusername.github.io  
+	•	Select Public Anyone can see this repository. You choose who can commit  
+	•	Check the box  - Initialize this repository with a README  you can  
+	•	Select Create repository  
+	•	You should now be on a new page with yourusername/yourusername.github.io  
+		for example 2Klasic/2Klasic.github.io
+		intialize with a ReadMe
+	then git clone your newly created repo to your macos/linux 
+Download Github Desktop
+	• Press the plus signed in the left corner and select Add then select Local Path and add the repo that you just created to Github Desktop "This is one way to push your changes to github and update your repo for cydia"
+Place all the files you folder that you got from my tutorial link and add your own packages.
+	(a) open Packages.sh file first and add your new file name here "this is the same name you will enter in the projects folder" dpkg-deb -bZgzip projects/setuptools debs ensure there is a blank space directly below the package name then save.
+	(b) open the projects folder and you will need to add your file you want to add to cydia
+		create 3 folders
+			1 Package Name for example setuptools
+			2 DEBIAN 
+			3 Directory your program will run for example if your program is suppose to work for command line on your will create a folder called usr/bin
+	this is how the folder directory should look
+		Application Name
+			DEBIAN
+				Install Directory
+		once you create the DEBIAN folder you will need to create  a control file inside of it 
+
+Package: com.2Klasic.setuptools
+Name: Setuptools
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Description of what the package does
+Maintainer: @your name <youremailaddress>
+Author: @your name <youremailaddress>
+Depends: what files your script depends on 
+Section: Tweaks
+
+then save that file/once you have all of that saved you will need to create the deb. the way to do that is cd into your github folder you just created and do chmod +x *.sh then do ./deb_update.sh you will only need to chmod +x *.sh once to create your deb but you will need to do ./deb_update.sh everytime to create new debs for other packages you created.
+
+you should now have a debian file inside of the deb folder if you did everything correctly.
+now to push all of these changes to both cydia and github go back to Github Desktop click on Uncommitted Changes for your repo add what you did in the summary brief statment click commit to master than click sync. Once sync is done you should have all the changes you just made onto Github.
+
+
+If you need any assistance with these steps feel free to send me a tweet on twitter @2Klasic and I'll do my best to assist. Happy Repoing 
